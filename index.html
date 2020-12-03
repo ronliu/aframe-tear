@@ -13,11 +13,14 @@
 
         <!-- ASSETS -->
         <a-assets>
-            <!-- Background audio plays automatically -->
-            <audio src="assets/audio-background.wav" autoplay preload></audio>
+            <audio id="audio-background" src="assets/audio-background.wav"></audio>
             <a-asset-item id="model-tear" src="assets/model-tear.gltf"></a-asset-item>
         </a-assets>
         
+        <!-- AUDIO -->
+        <a-entity
+            sound="src: #audio-background; positional: false; autoplay: true; loop: true; volume: .5"></a-entity>
+
         <!-- LIGHTS -->
         <a-entity
             light="type: directional; intensity: .5"
