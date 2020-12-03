@@ -8,15 +8,16 @@
 </head>
 <body>
     <a-scene 
-        background="color: #000000" 
-        rain="count: 1000; splash: false">
+        loading-scene="dotsColor: #ffffff; backgroundColor: #000000"
+        background="color: #000000">
 
         <!-- ASSETS -->
         <a-assets>
-            <audio id="audio-background" src="assets/audio-background.wav"></audio>
+            <audio id="audio-background" src="assets/audio-background.wav" preload></audio>
             <a-asset-item id="model-tear" src="assets/model-tear.gltf"></a-asset-item>
         </a-assets>
-        
+
+
         <!-- AUDIO -->
         <a-entity
             sound="src: #audio-background; positional: false; autoplay: true; loop: true; volume: .5"></a-entity>
