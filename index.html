@@ -4,9 +4,14 @@
     <meta charset="utf-8">
     <title>Tear</title>
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://rawgit.com/takahirox/aframe-rain/master/build/aframe-rain.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
 </head>
 <body>
-    <a-scene background="color: #000000">
+    <a-scene 
+        background="color: #000000" 
+        rain="count: 1000; splash: false">
+
         <a-assets>
             <a-asset-item id="model-tear" src="assets/model-tear.gltf"></a-asset-item>
         </a-assets>
@@ -22,16 +27,23 @@
         <!-- ENVIRONMENT -->
         <a-entity 
             gltf-model="#model-tear"    
-            position="0 .5 -6"
+            position="0 .5 -7"
             shadow="cast: true"
             animation__1="property: rotation; to: 0 360 0; dur: 20000; easing: linear; loop: true"
-            animation__2="property: position; to: 0 .8 -6; dir: alternate; dur: 2500; easing: easeInOutSine; loop: true"></a-entity>
+            animation__2="property: object3D.position.y; to: .8 -; dir: alternate; dur: 2500; easing: easeInOutSine; loop: true"></a-entity>
+        <a-ocean
+            position="0 -1 -7"
+            opacity=".25"
+            color="#808080"
+            width="50"
+            depth="50"
+            density="10"></a-ocean>
         <a-cylinder
-            position="0 -.5 -6"
+            position="0 -.5 -7"
             height=".05"
-            radius="2"
+            radius="1.5"
             material="opacity: .2; transparent: true"
-            animation="property: position; to: 0 -.35 -6; dir: alternate; dur: 2500; easing: easeInOutCubic; loop: true;"></a-cylinder>
+            animation="property: object3D.position.y; to: -.35; dir: alternate; dur: 2500; easing: easeInOutCubic; loop: true;"></a-cylinder>
     </a-scene>
 </body>
 </html>
