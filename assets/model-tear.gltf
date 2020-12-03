@@ -3,9 +3,6 @@
         "generator" : "Khronos glTF Blender I/O v1.3.48",
         "version" : "2.0"
     },
-    "extensionsUsed" : [
-        "KHR_materials_clearcoat"
-    ],
     "scene" : 0,
     "scenes" : [
         {
@@ -58,20 +55,13 @@
     ],
     "materials" : [
         {
-            "alphaCutoff" : 0.5,
-            "alphaMode" : "MASK",
+            "alphaMode" : "BLEND",
             "doubleSided" : true,
             "emissiveFactor" : [
                 0,
                 0,
                 0
             ],
-            "extensions" : {
-                "KHR_materials_clearcoat" : {
-                    "clearcoatFactor" : 0.4042549431324005,
-                    "clearcoatRoughnessFactor" : 0
-                }
-            },
             "name" : "Material.001",
             "pbrMetallicRoughness" : {
                 "baseColorFactor" : [
