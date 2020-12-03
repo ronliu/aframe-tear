@@ -11,7 +11,10 @@
         background="color: #000000" 
         rain="count: 1000; splash: false">
 
+        <!-- ASSETS -->
         <a-assets>
+            <!-- Background audio plays automatically -->
+            <audio src="assets/audio-background.wav" autoplay preload></audio>
             <a-asset-item id="model-tear" src="assets/model-tear.gltf"></a-asset-item>
         </a-assets>
         
@@ -24,6 +27,7 @@
             position="0 3 2"></a-entity>d
 
         <!-- ENVIRONMENT -->
+        <!-- Note: order of entities below affects their transparency! -->
         <a-entity 
             gltf-model="#model-tear"    
             position="0 .5 -7"
