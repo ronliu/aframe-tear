@@ -1,6 +1,6 @@
 A 3D scene displaying a teardrop model. My first A-Frame project after going through an A-Frame tutorial!
 
-Live preview: https://yakurutu.github.io/aframe-tear/
+Live preview: https://ronliu.github.io/aframe-tear/
 
 What I learned:
 - using the background component in &lt;a-scene&gt; is more reliable than making an &lt;a-sky&gt; entity
